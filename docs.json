@@ -1,54 +1,70 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "DYXY",
+  "name": "Platform Docs",
   "colors": {
-    "primary": "#1B1B2B",
-    "light": "#1B1B2B",
-    "dark": "#1B1B2B"
+    "primary": "#16A34A",
+    "light": "#4ADE80",
+    "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      },
-      {
-        "group": "Trading Bots",
-        "pages": [
+        "tab": "Documentation",
+        "groups": [
           {
-            "group": "Untitled Tab",
-            "pages": []
+            "group": "Getting Started",
+            "pages": [
+              "overview/introduction",
+              "overview/architecture",
+              "overview/quickstart"
+            ]
           },
           {
-            "group": "Untitled Group",
-            "pages": []
+            "group": "Trade",
+            "pages": [
+              "trade/swap",
+              "trade/perpetuals",
+              "trade/stocks"
+            ]
           },
           {
-            "group": "Untitled Group",
-            "pages": []
+            "group": "Trading Bots",
+            "pages": [
+              "bots/overview",
+              "bots/grid-bot",
+              "bots/dca-bot",
+              "bots/combo-bot",
+              "bots/sniper-bot"
+            ]
+          },
+          {
+            "group": "Earn Hub",
+            "pages": [
+              "earn/pools",
+              "earn/lend",
+              "earn/staking"
+            ]
+          },
+          {
+            "group": "Ecosystem & Rewards",
+            "pages": [
+              "ecosystem/portfolio",
+              "ecosystem/referrals"
+            ]
+          },
+          {
+            "group": "Security & Reference",
+            "pages": [
+              "resources/fees",
+              "resources/security-audits",
+              "resources/faq"
+            ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
