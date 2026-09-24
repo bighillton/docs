@@ -3,8 +3,8 @@
   "theme": "luma",
   "name": "Docs",
   "colors": {
-    "primary": "#1B1B2B",
-    "light": "#2C2A40",
+    "primary": "#FFFFFF",
+    "light": "#FFFFFF",
     "dark": "#FFFFFF"
   },
   "favicon": "/favicon.svg",
@@ -58,7 +58,7 @@
             "pages": [
               "resources/Fees",
               "resources/Security Audits",
-              "resources/FA"
+              "resources/FAQ"
             ]
           }
         ]
