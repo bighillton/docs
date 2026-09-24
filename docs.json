@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Platform Docs",
+  "theme": "luma",
+  "name": "Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#4ADE80",
-    "dark": "#15803D"
+    "primary": "#1B1B2B",
+    "light": "#2C2A40",
+    "dark": "#FFFFFF"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -16,50 +16,49 @@
           {
             "group": "Getting Started",
             "pages": [
-              "overview/introduction",
-              "overview/architecture",
-              "overview/quickstart"
+              "overview/Introduction",
+              "overview/Architecture",
+              "overview/Quickstart"
             ]
           },
           {
             "group": "Trade",
             "pages": [
-              "trade/swap",
-              "trade/perpetuals",
-              "trade/stocks"
+              "trade/Swap",
+              "trade/Perpetuals",
+              "trade/Stocks"
             ]
           },
           {
             "group": "Trading Bots",
             "pages": [
-              "bots/overview",
-              "bots/grid-bot",
-              "bots/dca-bot",
-              "bots/combo-bot",
-              "bots/sniper-bot"
+              "bots/Overview",
+              "bots/Grid bot",
+              "bots/DCA bot",
+              "bots/Sniper bot"
             ]
           },
           {
-            "group": "Earn Hub",
+            "group": "Earn",
             "pages": [
-              "earn/pools",
-              "earn/lend",
-              "earn/staking"
+              "earn/Pools",
+              "earn/Lend",
+              "earn/Staking"
             ]
           },
           {
             "group": "Ecosystem & Rewards",
             "pages": [
-              "ecosystem/portfolio",
-              "ecosystem/referrals"
+              "ecosystem/Portfolio",
+              "ecosystem/Referrals"
             ]
           },
           {
             "group": "Security & Reference",
             "pages": [
-              "resources/fees",
-              "resources/security-audits",
-              "resources/faq"
+              "resources/Fees",
+              "resources/Security Audits",
+              "resources/FA"
             ]
           }
         ]
@@ -97,7 +96,7 @@
     }
   },
   "icons": {
-    "library": "fontawesome"
+    "library": "lucide"
   },
   "appearance": {
     "default": "dark",
@@ -112,5 +111,8 @@
       "family": "Inter",
       "weight": 200
     }
+  },
+  "background": {
+    "decoration": "gradient"
   }
 }
