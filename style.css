@@ -15,31 +15,18 @@
   font-display: swap;
 }
 
-* {
+body, button, input, select, textarea {
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 2. Основной цвет фона (#1D1B2B) */
-html,
-body,
-#root,
-#__next,
-#content-area,
-main,
-aside,
-[class*="sidebar"] {
-  background-color: #1D1B2B !important;
-  background-image: none !important;
-}
-
-/* 3. Цвет хедера (#2C2A40) и фиксированная высота 62px */
+/* 2. Шапка: фон #2C2A40 и высота 62px без поломки внутренних элементов */
+#navbar,
 header,
-header *,
-[id*="navbar"],
-nav[class*="header"] {
+header > div {
   background-color: #2C2A40 !important;
 }
 
+#navbar,
 header {
   height: 62px !important;
   min-height: 62px !important;
@@ -47,15 +34,7 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 4. Сброс цвета заднего фона для интерактивных элементов хедера */
-header input,
-header button,
-header a,
-header div[class*="search"] {
-  background-color: transparent !important;
-}
-
-/* 5. Кнопка "Launch App" с нужным градиентом */
+/* 3. Кнопка "Launch App" (фиолетовый градиент) */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
@@ -63,7 +42,6 @@ a[href*="app.dyxy.io"] {
   border: none !important;
   border-radius: 8px !important;
   box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
-  transition: opacity 0.2s ease !important;
 }
 
 header a[href*="app.dyxy.io"]:hover {
