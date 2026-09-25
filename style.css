@@ -37,29 +37,45 @@ div[class*="tabs-bar"] {
   display: none !important;
 }
 
-/* 4. ФОН И УДАЛЕНИЕ НИЖНЕЙ ЛИНИИ (BORDER) У ХЕДЕРА */
+/* 4. ФОН И ПОЛНОЕ УДАЛЕНИЕ ЛЮБЫХ РАМОК, ТЕНЕЙ И ПСЕВДОЭЛЕМЕНТОВ ХЕДЕРА */
 header,
 div[class*="Header"],
-nav[class*="Header"] {
+nav[class*="Header"],
+div[class*="navbar"],
+div[class*="sticky"] {
   background-color: #2C2A40 !important;
   background: #2C2A40 !important;
-  border-bottom: none !important;
   border: none !important;
+  border-bottom: 0px transparent !important;
   box-shadow: none !important;
+  --tw-ring-color: transparent !important;
+  --tw-shadow: none !important;
+  --tw-border-opacity: 0 !important;
 }
 
-/* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА И УБИРАЕМ ЛИНИИ В СМЕЖНЫХ БЛОКАХ */
+/* Удаляем скрытые псевдо-линии ::after и ::before на стыке */
+header::after,
+header::before,
+div[class*="Header"]::after,
+div[class*="Header"]::before,
+div[class*="sticky"]::after,
+div[class*="sticky"]::before {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+}
+
+/* 5. УДАЛЕНИЕ ВЕРХНИХ РАМОК У ОСНОВНОГО КОНТЕНТА И САЙДБАРА */
+main,
 #header,
 div[id="header"],
 div[class*="PageHeader"],
-div[class*="header-bg"] {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
+div[class*="header-bg"],
+div[class*="sidebar"],
+aside {
+  border-top: none !important;
   box-shadow: none !important;
-  border: none !important;
-  padding-bottom: 0px !important;
-  margin-bottom: 12px !important;
+  background-image: none !important;
 }
 
 main h1 {
