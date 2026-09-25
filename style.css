@@ -135,31 +135,46 @@ a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
 
-/* 7. УВЕЛИЧИВАЕМ ПЛАШКИ САЙДБАРА ПО ВЫСОТЕ */
-aside a,
-div[class*="sidebar"] a,
-nav[aria-label="Sidebar"] a {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  margin-top: 4px !important;
-  margin-bottom: 4px !important;
-  min-height: 40px !important;
-  display: flex !important;
-  align-items: center !important;
+/* 7. ЕДИНАЯ СЕТКА САЙДБАРА (ВЫРАВНИВАНИЕ ПО ЛОГОТИПУ) */
+
+/* Заголовки групп (Getting Started, Trade, Trading Bots) — строго влево */
+aside [class*="sidebar"] h5,
+aside h5,
+aside div[class*="font-semibold"],
+aside p[class*="font-semibold"] {
+  padding-left: 12px !important;
+  margin-left: 0 !important;
+  margin-top: 24px !important;
+  margin-bottom: 8px !important;
 }
 
-/* 8. ДВИГАЕМ САЙДБАР СТРОГО ПОД ЛОГОТИП (ОТСТУП 32px) */
+/* Все обычные ссылки/пункты — ровный левый край для плашки выделения */
+aside nav a,
+aside ul li a,
+div[class*="sidebar"] a {
+  margin-left: 0 !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  border-radius: 8px !important;
+  min-height: 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+
+/* Внутренние подпункты (как на 4 скриншоте) — увод вправо */
+aside ul ul a,
+aside nav nav a,
+aside li li a {
+  padding-left: 28px !important;
+}
+
+/* 8. ПОЗИЦИОНИРОВАНИЕ САЙДБАРА ПОД ЛОГОТИПОМ */
 aside,
 div[class*="sidebar"],
 nav[aria-label="Sidebar"] {
-  padding-left: 32px !important;
+  padding-left: 32px !important; /* Ровно такой же отступ, как у логотипа в хедере */
   margin-left: 0 !important;
-  width: 280px !important; /* Настраиваем фиксированную ширину сайдбара */
-}
-
-/* Растягиваем блок с основным контентом (Architecture) правее */
-main,
-div[class*="main-content"] {
-  padding-left: 48px !important;
-  max-width: 100% !important;
 }
