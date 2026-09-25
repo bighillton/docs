@@ -41,9 +41,9 @@ nav[class*="header"] {
 }
 
 header {
-  height: 84px !important;
-  min-height: 84px !important;
-  max-height: 84px !important;
+  height: 62px !important;
+  min-height: 62px !important;
+  max-height: 62px !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
