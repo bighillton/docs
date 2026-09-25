@@ -37,45 +37,26 @@ div[class*="tabs-bar"] {
   display: none !important;
 }
 
-/* 4. ФОН И ПОЛНОЕ УДАЛЕНИЕ ЛЮБЫХ РАМОК, ТЕНЕЙ И ПСЕВДОЭЛЕМЕНТОВ ХЕДЕРА */
-header,
-div[class*="Header"],
-nav[class*="Header"],
-div[class*="navbar"],
-div[class*="sticky"] {
+/* 4. ФОН ХЕДЕРА И ИСЧЕЗНОВЕНИЕ ЛИНИИ (ПЕРЕКРАСКА В ЦВЕТ ХЕДЕРА #2C2A40) */
+header {
   background-color: #2C2A40 !important;
   background: #2C2A40 !important;
-  border: none !important;
-  border-bottom: 0px transparent !important;
+  border-color: #2C2A40 !important; /* Линия сливается с хедером */
+  border-bottom-color: #2C2A40 !important;
+  --tw-border-opacity: 1 !important;
   box-shadow: none !important;
-  --tw-ring-color: transparent !important;
-  --tw-shadow: none !important;
-  --tw-border-opacity: 0 !important;
 }
 
-/* Удаляем скрытые псевдо-линии ::after и ::before на стыке */
-header::after,
-header::before,
-div[class*="Header"]::after,
-div[class*="Header"]::before,
-div[class*="sticky"]::after,
-div[class*="sticky"]::before {
-  display: none !important;
-  content: none !important;
-  border: none !important;
-}
-
-/* 5. УДАЛЕНИЕ ВЕРХНИХ РАМОК У ОСНОВНОГО КОНТЕНТА И САЙДБАРА */
-main,
+/* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА СТРАНИЦЫ */
 #header,
 div[id="header"],
-div[class*="PageHeader"],
-div[class*="header-bg"],
-div[class*="sidebar"],
-aside {
-  border-top: none !important;
+div[class*="PageHeader"] {
+  background: transparent !important;
+  background-color: transparent !important;
   box-shadow: none !important;
-  background-image: none !important;
+  border: none !important;
+  padding-bottom: 0px !important;
+  margin-bottom: 12px !important;
 }
 
 main h1 {
@@ -83,21 +64,21 @@ main h1 {
   line-height: 1.2 !important;
 }
 
-/* 6. КНОПКА LAUNCH APP (ВЫСОТА 38px, ДЛИНА 168px) */
+/* 6. КНОПКА LAUNCH APP (ВЫСОТА 38px, ДЛИНА 168px, С ГРАДИЕНТОМ) */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   /* Градиент */
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   background-image: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   
-  /* Размеры: 168px на 38px */
+  /* Размеры: 168px x 38px */
   width: 168px !important;
   min-width: 168px !important;
   height: 38px !important;
   border-radius: 12px !important;
   padding: 7px 16px !important;
 
-  /* Центрирование */
+  /* Центрирование текста */
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -112,14 +93,14 @@ a[href*="app.dyxy.io"] {
   box-sizing: border-box !important;
 }
 
-/* Удаление встроенного фона у дочерних элементов кнопки */
-header a[href*="app.dyxy.io"] > *,
+/* Удаление встроенных фонов у внутренних элементов кнопки */
+header a[href*="app.dyxy.io"] >,
 a[href*="app.dyxy.io"] > * {
   background: transparent !important;
   background-color: transparent !important;
 }
 
-/* Скрытие стрелочки ">" */
+/* Скрытие стрелочки ">" в кнопке */
 header a[href*="app.dyxy.io"] svg,
 a[href*="app.dyxy.io"] svg {
   display: none !important;
