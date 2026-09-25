@@ -12,9 +12,6 @@
       "dark": "#1D1B2B"
     }
   },
-  "typography": {
-    "fontFamily": "MyCustomFont, sans-serif"
-  },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
