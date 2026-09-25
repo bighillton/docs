@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
+  "theme": "aspen",
   "name": "Docs",
   "colors": {
     "primary": "#8C7FFE",
@@ -31,7 +31,7 @@
     }
   },
   "icons": {
-    "library": "fontawesome"
+    "library": "lucide"
   },
   "navigation": {
     "tabs": [
