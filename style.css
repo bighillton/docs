@@ -61,11 +61,19 @@ header::after {
   pointer-events: none !important;
 }
 
-/* 4.2. ОТСТУПЫ В ХЕДЕРЕ (РАСШИРЕНИЕ ВЛЕВО И ВПРАВО) */
+/* 4.2. РАСТЯГИВАЕМ ХЕДЕР И ОСНОВНОЙ КОНТЕЙНЕР НА ВСЮ ШИРИНУ ЭКРАНА */
 header > div,
-header nav,
-div[class*="Header"] > div {
+div[class*="max-w-7xl"],
+div[class*="max-w-8xl"],
+div[class*="mx-auto"] {
   max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+}
+
+/* Выравниваем отступы у хедера */
+header > div {
   padding-left: 32px !important;
   padding-right: 32px !important;
 }
@@ -127,32 +135,31 @@ a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
 
-/* 7. ТОЧНОЕ УВЕЛИЧЕНИЕ ПЛАШЕК САЙДБАРА */
-aside ul li a,
-aside nav a,
+/* 7. УВЕЛИЧИВАЕМ ПЛАШКИ САЙДБАРА ПО ВЫСОТЕ */
+aside a,
 div[class*="sidebar"] a,
-a[class*="group flex"] {
+nav[aria-label="Sidebar"] a {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-  padding-left: 14px !important;
-  padding-right: 14px !important;
-  margin-top: 3px !important;
-  margin-bottom: 3px !important;
-  border-radius: 10px !important;
-  font-size: 15px !important;
-  line-height: 20px !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+  min-height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
-aside ul li a span,
-aside nav a span {
-  line-height: 20px !important;
-}
-
-/* 8. ВЫРАВНИВАНИЕ САЙДБАРА СТРОГО ПОД ЛОГОТИПОМ (СБРОС ВНУТРЕННИХ ОТСТУПОВ) */
+/* 8. ДВИГАЕМ САЙДБАР СТРОГО ПОД ЛОГОТИП (ОТСТУП 32px) */
 aside,
 div[class*="sidebar"],
-div[class*="Sidebar"],
-aside > div {
-  padding-left: 18px !important;
+nav[aria-label="Sidebar"] {
+  padding-left: 32px !important;
   margin-left: 0 !important;
+  width: 280px !important; /* Настраиваем фиксированную ширину сайдбара */
+}
+
+/* Растягиваем блок с основным контентом (Architecture) правее */
+main,
+div[class*="main-content"] {
+  padding-left: 48px !important;
+  max-width: 100% !important;
 }
