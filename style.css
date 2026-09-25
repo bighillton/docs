@@ -1,0 +1,52 @@
+/* 1. Подключаем шрифт из папки fonts */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/fonts/mycustomfont-regular.woff2') format('woff2'); /* Укажи точное имя своего .woff2 файла из папки fonts */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Применяем шрифт ко всему сайту */
+body, h1, h2, h3, h4, h5, h6, p, span, a, button, input {
+  font-family: 'CustomFont', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* 3. Нормальный темный фон (убираем эту грязно-синюю муть) */
+html.dark, 
+html.dark body {
+  background-color: #09090b !important;
+}
+
+/* 4. Приводим в порядок размеры текста и заголовков */
+h1 {
+  font-size: 2.25rem !important; /* 36px */
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.02em !important;
+}
+
+h2 {
+  font-size: 1.5rem !important; /* 24px */
+  font-weight: 600 !important;
+  color: #f4f4f5 !important;
+  margin-top: 2rem !important;
+}
+
+p, li {
+  font-size: 1rem !important; /* 16px */
+  line-height: 1.65 !important;
+  color: #a1a1aa !important; /* Читаемый серый цвет текста */
+}
+
+/* 5. Сайдбар и Шапка */
+html.dark aside {
+  background-color: #09090b !important;
+  border-right: 1px solid #18181b !important;
+}
+
+/* 6. Карточки (Quickstart / Next) */
+html.dark [class*="Card"],
+html.dark a[href] {
+  border-color: #27272a !important;
+}
