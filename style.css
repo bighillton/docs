@@ -63,18 +63,18 @@ main h1 {
   line-height: 1.2 !important;
 }
 
-/* 6. СТИЛИЗАЦИЯ ТОЛЬКО КНОПКИ LAUNCH APP (СТРОГО ПО ССЫЛКЕ HREF) */
+/* 6. СТИЛИЗАЦИЯ ТОЛЬКО КНОПКИ LAUNCH APP (ВЫСОТА 40px) */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   /* Градиент из Figma */
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   background-image: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   
-  /* Размеры и скругление из Figma */
+  /* Размеры и скругление (высота 40px) */
   min-width: 174px !important;
-  height: 46px !important;
+  height: 40px !important;
   border-radius: 12px !important;
-  padding: 10px 24px !important;
+  padding: 8px 24px !important;
 
   /* Центрирование */
   display: inline-flex !important;
