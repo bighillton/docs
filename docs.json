@@ -38,61 +38,54 @@
   "icons": {
     "library": "lucide"
   },
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Documentation",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "overview/Introduction",
-              "overview/Architecture",
-              "overview/Quickstart"
-            ]
-          },
-          {
-            "group": "Trade",
-            "pages": [
-              "trade/Swap",
-              "trade/Perpetuals",
-              "trade/Stocks"
-            ]
-          },
-          {
-            "group": "Trading Bots",
-            "pages": [
-              "bots/Overview",
-              "bots/Grid bot",
-              "bots/DCA bot",
-              "bots/Sniper bot"
-            ]
-          },
-          {
-            "group": "Earn",
-            "pages": [
-              "earn/Pools",
-              "earn/Lend",
-              "earn/Staking"
-            ]
-          },
-          {
-            "group": "Ecosystem & Rewards",
-            "pages": [
-              "ecosystem/Portfolio",
-              "ecosystem/Referrals"
-            ]
-          },
-          {
-            "group": "Security & Reference",
-            "pages": [
-              "resources/Fees",
-              "resources/Security Audits",
-              "resources/FAQ"
-            ]
-          }
-        ]
-      }
-    ]
-  }
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "overview/Introduction",
+        "overview/Architecture",
+        "overview/Quickstart"
+      ]
+    },
+    {
+      "group": "Trade",
+      "pages": [
+        "trade/Swap",
+        "trade/Perpetuals",
+        "trade/Stocks"
+      ]
+    },
+    {
+      "group": "Trading Bots",
+      "pages": [
+        "bots/Overview",
+        "bots/Grid bot",
+        "bots/DCA bot",
+        "bots/Sniper bot"
+      ]
+    },
+    {
+      "group": "Earn",
+      "pages": [
+        "earn/Pools",
+        "earn/Lend",
+        "earn/Staking"
+      ]
+    },
+    {
+      "group": "Ecosystem & Rewards",
+      "pages": [
+        "ecosystem/Portfolio",
+        "ecosystem/Referrals"
+      ]
+    },
+    {
+      "group": "Security & Reference",
+      "pages": [
+        "resources/Fees",
+        "resources/Security Audits",
+        "resources/FAQ"
+      ]
+    }
+  ]
 }
