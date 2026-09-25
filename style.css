@@ -43,7 +43,7 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА (Swap) НА НАВИГАЦИЮ (< Quickstart) */
+/* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА НА НАВИГАЦИЮ */
 #header,
 div[id="header"],
 div[class*="PageHeader"],
@@ -62,20 +62,31 @@ main h1 {
   line-height: 1.2 !important;
 }
 
-/* 6. КНОПКА "Launch App" — ЕДИНЫЙ СТИЛЬ ДЛЯ ДЕСКТОПА И МОБИЛЬНОЙ ВЕРСИИ */
-/* Десктопная кнопка в хедере и мобильная кнопка в меню */
+/* 6. КНОПКА "Launch App" С ТОЧНЫМИ РАЗМЕРАМИ ИЗ FIGMA */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"],
 div[role="dialog"] a[href*="app.dyxy.io"],
 [class*="mobile"] a[href*="app.dyxy.io"] {
-  background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
-  color: #FFFFFF !important;
-  border: none !important;
-  border-radius: 10px !important; /* Укажи любой border-radius из Figma */
-  box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
+  /* Размеры и скругление из Figma */
+  min-width: 174px !important;
+  height: 46px !important;
+  border-radius: 12px !important;
+
+  /* Внутренние отступы и зазоры из Figma */
+  padding: 10px 24px !important;
+  gap: 8px !important;
+
+  /* Выравнивание по центру */
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+
+  /* Градиент, цвет текста и параметры */
+  background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
+  box-sizing: border-box !important;
   font-weight: 500 !important;
 }
 
