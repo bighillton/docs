@@ -19,25 +19,26 @@ body, button, input, select, textarea {
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 2. НАМЕРТВО СНОСИМ ПОЛОСУ ТАБОВ (Documentation) */
+/* 2. СКРЫВАЕМ ПОЛОСУ ТАБОВ (Documentation) */
 nav[aria-label="Tabs"],
-div:has(> nav[aria-label="Tabs"]),
-[class*="tabs-bar"],
-[class*="TabsBar"] {
+nav[aria-label="tabs"],
+div[class*="tabs-bar"] {
   display: none !important;
 }
 
-/* 3. ФОН ХЕДЕРА (#2C2A40) */
+/* 3. ФОН И СТИЛЬ ХЕДЕРА (#2C2A40) */
 header {
   background-color: #2C2A40 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 4. УБИРАЕМ ПРЯМОУГОЛЬНЫЙ ОВЕРЛЕЙ У ЗАГОЛОВКА СТРАНИЦЫ (Stocks / Quickstart) */
-main #header,
-main div[class*="bg-"],
-main header,
-div[class*="hero"] {
+/* 4. УБИРАЕМ ТЕМНЫЙ ПРЯМОУГОЛЬНИК ВОКРУГ ЗАГОЛОВКОВ (Stocks, Quickstart) */
+main h1,
+main h1 + div,
+main [class*="hero"],
+main div[class*="bg-slate"],
+main div[class*="bg-zinc"],
+main div[class*="bg-neutral"] {
   background-color: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
