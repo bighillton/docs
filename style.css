@@ -72,7 +72,7 @@ a[href*="app.dyxy.io"] {
   
   /* Размеры и скругление (высота 40px) */
   min-width: 174px !important;
-  height: 36px !important;
+  height: 40px !important;
   border-radius: 12px !important;
   padding: 8px 24px !important;
 
