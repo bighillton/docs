@@ -1,4 +1,4 @@
-/* 1. Подключение шрифтов */
+/* 1. Шрифты */
 @font-face {
   font-family: 'MyCustomFont';
   src: url('/fonts/MyCustomFont-Regular.woff2') format('woff2');
@@ -19,50 +19,43 @@
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 2. Основной фон страницы и всех оберток (#1B1B2B) */
+/* 2. Основной фон (#1B1B2B) */
 html,
 body,
 :root,
 body.dark,
 [class*="bg-background"],
-[class*="bg-zinc-"],
-[class*="bg-slate-"],
-[class*="bg-neutral-"],
 #content-area,
 main {
   background-color: #1B1B2B !important;
   background-image: none !important;
 }
 
-/* 3. Верхняя шапка / Header (#2C2A40) */
+/* 3. Верхняя шапка (#2C2A40) */
 header,
 nav,
-[class*="header"],
 [class*="navbar"],
 [class*="top-bar"] {
   background-color: #2C2A40 !important;
   border-bottom-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 4. Левый сайдбар / Sidebar (#1B1B2B) */
+/* 4. Сайдбар (#1B1B2B) */
 aside,
-[class*="sidebar"],
-[class*="navigation"] {
+[class*="sidebar"] {
   background-color: #1B1B2B !important;
   border-right-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 /* 5. Кнопка "Launch App" с указанным градиентом */
 header a[href*="app.dyxy.io"],
-a[href*="app.dyxy.io"],
-button[class*="primary"],
-a[class*="bg-primary"] {
+a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   color: #FFFFFF !important;
   border: none !important;
   border-radius: 8px !important;
   font-weight: 500 !important;
-  box-shadow: 0 4px 12px rgba(137, 103, 251, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
   transition: all 0.2s ease-in-out !important;
 }
 
