@@ -1,4 +1,6 @@
-/* 1. ПОДКЛЮЧЕНИЕ ШРИФТОВ */
+/* ==========================================
+   1. ПОДКЛЮЧЕНИЕ ШРИФТОВ
+   ========================================== */
 @font-face {
   font-family: 'MyCustomFont';
   src: url('/fonts/MyCustomFont-Regular.woff2') format('woff2');
@@ -15,7 +17,9 @@
   font-display: swap;
 }
 
-/* 2. ПРИНУДИТЕЛЬНЫЙ ШРИФТ ДЛЯ ВСЕХ ТЕГОВ */
+/* ==========================================
+   2. ПРИНУДИТЕЛЬНЫЙ ШРИФТ ДЛЯ ВСЕХ ТЕГОВ
+   ========================================== */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -30,14 +34,18 @@ summary, time, mark, audio, video, button, input {
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 3. СКРЫВАЕМ ПОЛОСУ ТАБОВ (Documentation) */
+/* ==========================================
+   3. СКРЫВАЕМ ПОЛОСУ ТАБОВ (Documentation)
+   ========================================== */
 nav[aria-label="Tabs"],
 nav[aria-label="tabs"],
 div[class*="tabs-bar"] {
   display: none !important;
 }
 
-/* 4. ФОН И СТИЛЬ ХЕДЕРА (#2C2A40) */
+/* ==========================================
+   4. ФОН И СТИЛЬ ХЕДЕРА (#2C2A40)
+   ========================================== */
 header,
 div[class*="Header"],
 nav[class*="Header"] {
@@ -61,8 +69,15 @@ header::after {
   pointer-events: none !important;
 }
 
-/* 4.2. РАСТЯГИВАЕМ ХЕДЕР И ОСНОВНОЙ КОНТЕЙНЕР НА ВСЮ ШИРИНУ ЭКРАНА */
+/* 4.2. ОТСТУПЫ В ХЕДЕРЕ И РАСТЯГИВАНИЕ СЕТКИ */
 header > div,
+header nav,
+div[class*="Header"] > div {
+  max-width: 100% !important;
+  padding-left: 20px !important;
+  padding-right: 32px !important;
+}
+
 div[class*="max-w-7xl"],
 div[class*="max-w-8xl"],
 div[class*="mx-auto"] {
@@ -72,13 +87,9 @@ div[class*="mx-auto"] {
   width: 100% !important;
 }
 
-/* Выравниваем отступы у хедера */
-header > div {
-  padding-left: 32px !important;
-  padding-right: 32px !important;
-}
-
-/* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА И СБРОС ЛИНИЙ */
+/* ==========================================
+   5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА И СБРОС ЛИНИЙ
+   ========================================== */
 #header,
 div[id="header"],
 div[class*="PageHeader"],
@@ -97,7 +108,9 @@ main h1 {
   line-height: 1.2 !important;
 }
 
-/* 6. КНОПКА LAUNCH APP (ВЫСОТА 38px, ДЛИНА 168px) */
+/* ==========================================
+   6. КНОПКА LAUNCH APP (ВЫСОТА 38px, ДЛИНА 168px)
+   ========================================== */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
@@ -136,26 +149,26 @@ a[href*="app.dyxy.io"]:hover {
 }
 
 /* ==========================================
-   7 & 8. ТОЧНЫЙ ВЗЛОМ СЕТКИ MINTLIFY ПО РЕАЛЬНЫМ КЛАССАМ
+   7. ВЫРАВНИВАНИЕ ЭЛЕМЕНТОВ ВНУТРИ САЙДБАРА
    ========================================== */
 
-/* 1. Сбрасываем внутренний отступ pl-4 у заголовков групп (Getting Started) */
+/* Сбрасываем лишний отступ pl-4 у заголовков групп (Getting Started) */
 #navigation-items .sidebar-group-header {
   padding-left: 0px !important;
   margin-left: 0px !important;
 }
 
-/* 2. Убираем сдвиг у контейнеров списков */
+/* Убираем сдвиг у контейнеров списков */
 #navigation-items .sidebar-group {
   padding-left: 0px !important;
   margin-left: 0px !important;
 }
 
-/* 3. Выравниваем плашки меню: левый край плашки встает РОВНО под первой буквой заголовка */
+/* Выравниваем плашки: край плашки встает ровно под первой буквой заголовка */
 #navigation-items .sidebar-group a {
   margin-left: 0px !important;
   margin-right: 0px !important;
-  padding-left: 12px !important; /* Отступ текста ВНУТРИ плашки */
+  padding-left: 12px !important;
   padding-right: 12px !important;
   border-radius: 8px !important;
   min-height: 38px !important;
@@ -163,14 +176,26 @@ a[href*="app.dyxy.io"]:hover {
   align-items: center !important;
 }
 
-/* 4. Если внутри есть подпункты (как в Uniswap) — смещаем их правее */
+/* Вложенные подпункты уводим правее */
 #navigation-items .sidebar-group ul a,
 #navigation-items .sidebar-group .sidebar-group a {
   padding-left: 24px !important;
 }
 
-/* 5. Позиционируем весь блок навигации строго под логотипом */
-#navigation-items {
+/* ==========================================
+   8. ПОЗИЦИОНИРОВАНИЕ ВСЕГО САЙДБАРА ВЛЕВО ПОД ЗНАЧОК
+   ========================================== */
+
+/* Обнуляем отступы всех внешних оберток сайдбара */
+div[data-component-part="scroll-area-content"],
+aside > div,
+aside {
   padding-left: 0px !important;
+  margin-left: 0px !important;
+}
+
+/* Задаем жесткий левый отступ для всей панели (ровно под логотип mintlify) */
+#navigation-items {
+  padding-left: 20px !important;
   margin-left: 0px !important;
 }
