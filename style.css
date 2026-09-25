@@ -127,16 +127,18 @@ a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
 
-/* 7. УВЕЛИЧЕНИЕ ВЫСОТЫ И КЛИКАБЕЛЬНОСТИ БЛОКОВ САЙДБАРА */
+/* 7. УВЕЛИЧЕНИЕ ВЫСОТЫ И КЛИКАБЕЛЬНОСТИ БЛОКОВ САЙДБАРА (44px) */
+aside a,
+aside ul li a,
 aside nav a,
-div[class*="sidebar"] nav a,
-div[class*="Sidebar"] a {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  margin-top: 2px !important;
-  margin-bottom: 2px !important;
-  min-height: 36px !important;
+div[class*="sidebar"] a {
+  height: 44px !important;
+  min-height: 44px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
   display: flex !important;
   align-items: center !important;
-  border-radius: 10px !important;
+  border-radius: 12px !important;
 }
