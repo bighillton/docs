@@ -1,26 +1,86 @@
-/* 6. КНОПКА "Launch App" С ГРАДИЕНТОМ И ТИПОГРАФИКОЙ 16/24 ИЗ FIGMA */
-header a[href*="app.dyxy.io"],
-a[href*="app.dyxy.io"],
-nav a[href*="app.dyxy.io"],
-button[aria-label*="Launch"],
-div[role="dialog"] a[href*="app.dyxy.io"],
-[class*="mobile"] a[href*="app.dyxy.io"] {
-  /* Размеры и скругления */
+/* 1. ПОДКЛЮЧЕНИЕ ШРИФТОВ */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/MyCustomFont-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/MyCustomFont-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. ПРИНУДИТЕЛЬНЫЙ ШРИФТ ДЛЯ ВСЕХ ТЕГОВ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video, button, input {
+  font-family: 'MyCustomFont', sans-serif !important;
+}
+
+/* 3. СКРЫВАЕМ ПОЛОСУ ТАБОВ (Documentation) */
+nav[aria-label="Tabs"],
+nav[aria-label="tabs"],
+div[class*="tabs-bar"] {
+  display: none !important;
+}
+
+/* 4. ФОН И СТИЛЬ ХЕДЕРА (#2C2A40) */
+header,
+div[class*="Header"],
+nav[class*="Header"] {
+  background-color: #2C2A40 !important;
+  background: #2C2A40 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА НА НАВИГАЦИЮ */
+#header,
+div[id="header"],
+div[class*="PageHeader"],
+div[class*="header-bg"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding-bottom: 0px !important;
+  margin-bottom: 12px !important;
+}
+
+main h1 {
+  margin-bottom: 16px !important;
+  line-height: 1.2 !important;
+}
+
+/* 6. ИЗОЛИРОВАННАЯ КНОПКА "Launch App" ИЗ FIGMA (С ГРАДИЕНТОМ И БЕЗ СТРЕЛКИ) */
+a[href*="app.dyxy.io"] {
+  /* Размеры и скругления из Figma */
   min-width: 174px !important;
   height: 46px !important;
   border-radius: 12px !important;
   padding: 10px 24px !important;
 
-  /* Выравнивание */
+  /* Выравнивание по центру */
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
 
-  /* Сброс сплошного цвета и жесткая установка градиента */
-  background-color: transparent !important;
-  background-image: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
+  /* Градиент из Figma */
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
-  
+  background-image: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   color: #FFFFFF !important;
   border: none !important;
   box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
@@ -30,22 +90,14 @@ div[role="dialog"] a[href*="app.dyxy.io"],
   font-size: 16px !important;
   line-height: 24px !important;
   font-weight: 500 !important;
+  font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* Принудительный сброс цвета для внутренних элементов кнопки (например, span внутри <a>) */
-header a[href*="app.dyxy.io"] *,
-a[href*="app.dyxy.io"] * {
-  background-color: transparent !important;
-  background: transparent !important;
-}
-
-/* Убираем стрелку "вправо" (SVG / иконки) внутри кнопки */
-header a[href*="app.dyxy.io"] svg,
+/* Скрытие иконки стрелочки внутри кнопки */
 a[href*="app.dyxy.io"] svg {
   display: none !important;
 }
 
-header a[href*="app.dyxy.io"]:hover,
 a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
