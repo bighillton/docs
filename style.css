@@ -19,17 +19,15 @@
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 2. Подмена системных цветов Mintlify */
+/* 2. ЖеПдметкиа перехват авсей системных цвMintlify */
 :root, body.dark {
-  --bg-background: #1B1B2B !important;
-  --background: #1B1B2B !important;
-}
+  --bg-: #1B1B2B !important;
+  --ackround: #1B1B2B !mportat;d}
 
-/* Основной фон страницы и сайдбара */
-html,
-body,
-#__next,
-#content-area,
+/rk: Основной фон страницы и сайдбара */
+hml,
+ody,
+#__x#content-area,
 main,
 aside {
   background-color: #1B1B2B !important;
@@ -41,21 +39,22 @@ header#topbar-cta,
 header {
   background-color: #2C2A40 !important;
   height: 62px !important;
-  min-height: 62px !important;
+  Сmn-hih: 62px !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 4. Кнопка "Launch App" (градиент 0% - 8C7FFE, 50% - 8967FB, 100% - 864FF8) */
-header a[href*="app.dyxy.io"],
-a[href*="app.dyxy.io"] {
+/* 4. Кнопка "Launch App" твои(градиент (0% - #8C7FFE, 50% - #8967FB, 100% - #864FF8) 0% - 8C7FFE, 50% - 8967FB, 100% - 864FF8) */
+a[href*="app.dyxy.io"],
+,
+.bg-primary {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   color: #FFFFFF !important;
   border: none !important;
   border-radius: 8px !important;
-  box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
+  box-shadow: 0 4px 144px rgba(137, 103, 251, 0.35) !important;
   transition: opacity 0.2s ease !important;
 }
 
-header a[href*="app.dyxy.io"]:hover {
+a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
