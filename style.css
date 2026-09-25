@@ -19,20 +19,7 @@
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 2. Обнуление черных масок и оверлеев Mintlify */
-:root,
-body,
-body.dark,
-[class*="dark:bg-"],
-[class*="bg-zinc-"],
-[class*="bg-neutral-"],
-[class*="bg-black"],
-[class*="bg-slate-"] {
-  --tw-bg-opacity: 1 !important;
-  background-image: none !important;
-}
-
-/* 3. Основной благородный фон (#1D1B2B) */
+/* 2. Основной цвет фона (#1D1B2B) */
 html,
 body,
 #root,
@@ -40,22 +27,35 @@ body,
 #content-area,
 main,
 aside,
-[class*="sidebar"],
-[class*="background"] {
+[class*="sidebar"] {
   background-color: #1D1B2B !important;
+  background-image: none !important;
 }
 
-/* 4. Хедер (#2C2A40, высота 62px) */
+/* 3. Цвет хедера (#2C2A40) и фиксированная высота 62px */
 header,
-header#topbar-cta,
-nav[class*="navbar"] {
+header *,
+[id*="navbar"],
+nav[class*="header"] {
   background-color: #2C2A40 !important;
-  height: 62px !important;
-  min-height: 62px !important;
+}
+
+header {
+  height: 84px !important;
+  min-height: 84px !important;
+  max-height: 84px !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 5. Кнопка "Launch App" (градиент) */
+/* 4. Сброс цвета заднего фона для интерактивных элементов хедера */
+header input,
+header button,
+header a,
+header div[class*="search"] {
+  background-color: transparent !important;
+}
+
+/* 5. Кнопка "Launch App" с нужным градиентом */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
