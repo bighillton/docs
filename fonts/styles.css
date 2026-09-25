@@ -1,10 +1,65 @@
+/* 1. Загрузка файла шрифта */
 @font-face {
   font-family: 'Ferro Grotesk';
   src: url('/fonts/mycustomfont-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, span, a {
-  font-family: 'Ferro Grotesk', sans-serif !important;
+/* 2. Принудительное применение шрифта ко всему сайту */
+:root {
+  --font-family-body: 'CustomFont', sans-serif !important;
+  --font-family-heading: 'CustomFont', sans-serif !important;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, span, a, button, input {
+  font-family: 'CustomFont', sans-serif !important;
+}
+
+/* Цвет главного фона сайта (в темной теме) */
+html.dark, 
+html.dark body {
+  background-color: #1B1B2B !important; /* Твой кастомный HEX фона */
+}
+
+/* Цвет бокового меню (Sidebar) */
+html.dark aside,
+html.dark [class*="Sidebar"] {
+  background-color: #FFFFFF !important;
+}
+
+/* Цвет верхнего шапки (Header/Navbar) */
+html.dark header {
+  background-color: #2C2A40 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Кастомизация карточек и плашек */
+html.dark [class*="Card"], 
+html.dark .rounded-xl {
+  background-color: #121215 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Главные заголовки H1 */
+h1 {
+  font-size: 2.25rem !important; /* 36px */
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: #FFFFFF !important;
+}
+
+/* Подзаголовки H2 */
+h2 {
+  font-size: 1.5rem !important; /* 24px */
+  font-weight: 600 !important;
+  color: #F4F4F5 !important;
+}
+
+/* Основной текст параграфов */
+p {
+  font-size: 0.95rem !important; /* ~15px */
+  line-height: 1.6 !important;
+  color: #A1A1AA !important; /* Приглушенный серый */
 }
