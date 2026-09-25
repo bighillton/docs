@@ -65,8 +65,17 @@ main h1 {
   line-height: 1.2 !important;
 }
 
-/* 6. ИЗОЛИРОВАННАЯ КНОПКА "Launch App" ИЗ FIGMA (С ГРАДИЕНТОМ И БЕЗ СТРЕЛКИ) */
-a[href*="app.dyxy.io"] {
+/* 6. КНОПКА "Launch App" — ЖЕСТКАЯ ПОДМЕНА ГРАДИЕНТА С НЕЙТРАЛИЗАЦИЕЙ TAILWIND */
+html body header a[href*="app.dyxy.io"],
+html body a[href*="app.dyxy.io"] {
+  /* Нейтрализация фонового цвета Tailwind */
+  --tw-bg-opacity: 1 !important;
+  background-color: unset !important;
+  
+  /* Принудительная установка линейного градиента */
+  background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
+  background-image: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
+  
   /* Размеры и скругления из Figma */
   min-width: 174px !important;
   height: 46px !important;
@@ -78,26 +87,23 @@ a[href*="app.dyxy.io"] {
   align-items: center !important;
   justify-content: center !important;
 
-  /* Градиент из Figma */
-  background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
-  background-image: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
+  /* Свойства текста и тени */
   color: #FFFFFF !important;
   border: none !important;
   box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
   box-sizing: border-box !important;
 
-  /* Типографика из Figma: accident/base 16/24 */
+  /* Типографика из Figma (accident/base 16/24) */
   font-size: 16px !important;
   line-height: 24px !important;
   font-weight: 500 !important;
-  font-family: 'MyCustomFont', sans-serif !important;
 }
 
 /* Скрытие иконки стрелочки внутри кнопки */
-a[href*="app.dyxy.io"] svg {
+html body a[href*="app.dyxy.io"] svg {
   display: none !important;
 }
 
-a[href*="app.dyxy.io"]:hover {
+html body a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
