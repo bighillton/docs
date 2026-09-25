@@ -19,22 +19,20 @@ body, button, input, select, textarea {
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 2. Шапка: фон #2C2A40 и высота 62px без поломки внутренних элементов */
-#navbar,
-header,
-header > div {
-  background-color: #2C2A40 !important;
+/* 2. Нативная подмена цвета хедера через переменные Mintlify */
+:root, body.dark {
+  --header-bg: #2C2A40 !important;
 }
 
-#navbar,
-header {
-  height: 62px !important;
-  min-height: 62px !important;
-  max-height: 62px !important;
+/* 3. Окрашивание хедера без жестких высот */
+header,
+#topbar-cta,
+nav[class*="header"] {
+  background-color: #2C2A40 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 3. Кнопка "Launch App" (фиолетовый градиент) */
+/* 4. Кнопка "Launch App" с градиентом */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
