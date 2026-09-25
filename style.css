@@ -38,6 +38,13 @@ nav[class*="navbar"] {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
+<<<<<<< editor
+/* 5. Боковая панель (Sidebar) */
+aside,
+html.dark aside {
+  background-color: #1B1B2B !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+=======
 /* 5. Боковая панель (Sidebar) */
 aside,
 html.dark aside {
@@ -56,6 +63,27 @@ a[href*="app.dyxy.io"] {
   border: none !important;
   box-shadow: 0 4px 14px rgba(168, 85, 247, 0.3) !important;
   transition: all 0.2s ease-in-out !important;
+>>>>>>> git
+}
+
+<<<<<<< editor
+/* 6. Кастомная градиентная кнопка "Launch App" */
+header a[href*="app.dyxy.io"],
+a[href*="app.dyxy.io"] {
+  background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%) !important;
+  color: #FFFFFF !important;
+  border-radius: 10px !important; /* Углы кнопки */
+  padding: 8px 18px !important;
+  font-weight: 500 !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.3) !important;
+  transition: all 0.2s ease-in-out !important;
+=======
+header a[href*="app.dyxy.io"]:hover,
+a[href*="app.dyxy.io"]:hover {
+  opacity: 0.9 !important;
+  transform: translateY(-1px) !important;
+>>>>>>> git
 }
 
 header a[href*="app.dyxy.io"]:hover,
