@@ -48,7 +48,7 @@ nav[class*="Header"] {
   box-shadow: none !important;
 }
 
-/* 4.1. МАСКИРОВКА ТОНКОЙ ЛИНИИ ПОД ХЕДЕРОМ */
+/* 4.1. МАСКИРОВКА ТОНКОЙ ЛИНИИ ПОД ХЕДЕРОМ В ЦВЕТ ОСНОВНОЙ ОБЛАСТИ (#1D1B2B) */
 header::after {
   content: '' !important;
   position: absolute !important;
@@ -56,7 +56,7 @@ header::after {
   left: 0 !important;
   right: 0 !important;
   height: 3px !important;
-  background-color: #2C2A40 !important;
+  background-color: #1D1B2B !important;
   z-index: 10 !important;
   pointer-events: none !important;
 }
@@ -73,11 +73,6 @@ div[class*="header-bg"] {
   border: none !important;
   padding-bottom: 0px !important;
   margin-bottom: 12px !important;
-}
-
-main h1 {
-  margin-bottom: 16px !important;
-  line-height: 1.2 !important;
 }
 
 main h1 {
