@@ -194,8 +194,8 @@ aside {
   margin-left: 0px !important;
 }
 
-/* Задаем жесткий левый отступ для всей панели (ровно под логотип mintlify) */
+/* Увеличили отступ с 20px до 36px, чтобы сдвинуть всё правее под логотип */
 #navigation-items {
-  padding-left: 20px !important;
+  padding-left: 36px !important;
   margin-left: 0px !important;
 }
