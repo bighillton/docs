@@ -109,24 +109,24 @@ main h1 {
 }
 
 /* ==========================================
-   6. КНОПКА LAUNCH APP (ВЫСОТА 38px, ДЛИНА 168px)
+   6. КНОПКА LAUNCH APP (ВЫСОТА 34px, ДЛИНА 152px, REGULAR)
    ========================================== */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   background-image: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
-  width: 168px !important;
-  min-width: 168px !important;
-  height: 38px !important;
+  width: 152px !important;
+  min-width: 152px !important;
+  height: 34px !important;
   border-radius: 12px !important;
-  padding: 7px 16px !important;
+  padding: 5px 16px !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   color: #FFFFFF !important;
   font-size: 16px !important;
   line-height: 24px !important;
-  font-weight: 500 !important;
+  font-weight: 400 !important; /* Regular шрифт */
   border: none !important;
   box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
   box-sizing: border-box !important;
@@ -136,6 +136,7 @@ header a[href*="app.dyxy.io"] > *,
 a[href*="app.dyxy.io"] > * {
   background: transparent !important;
   background-color: transparent !important;
+  font-weight: 400 !important;
 }
 
 header a[href*="app.dyxy.io"] svg,
@@ -194,7 +195,7 @@ aside {
   margin-left: 0px !important;
 }
 
-/* Увеличили отступ с 20px до 36px, чтобы сдвинуть всё правее под логотип */
+/* Задаем жесткий левый отступ для всей панели (ровно под логотип mintlify) */
 #navigation-items {
   padding-left: 36px !important;
   margin-left: 0px !important;
