@@ -31,7 +31,7 @@
     }
   },
   "icons": {
-    "library": "tabler"
+    "library": "fontawesome"
   },
   "navigation": {
     "tabs": [
