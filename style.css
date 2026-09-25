@@ -19,66 +19,43 @@
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 2. Чистый единый фон страницы без паразитных плашек */
+/* 2. Подмена системных цветов Mintlify */
+:root, body.dark {
+  --bg-background: #1B1B2B !important;
+  --background: #1B1B2B !important;
+}
+
+/* Основной фон страницы и сайдбара */
 html,
 body,
-#root,
 #__next,
-body.dark,
 #content-area,
-main {
+main,
+aside {
   background-color: #1B1B2B !important;
   background-image: none !important;
 }
 
-/* 3. Высота хедера точно 62px */
-header,
-nav#navbar,
-[class*="Header"],
-[class*="navbar"] {
+/* 3. Хедер (#2C2A40, высота 62px) */
+header#topbar-cta,
+header {
+  background-color: #2C2A40 !important;
   height: 62px !important;
   min-height: 62px !important;
-  max-height: 62px !important;
-  background-color: #1B1B2B !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  display: flex !important;
-  align-items: center !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
 }
 
-/* 4. Сайдбар без темных квадратов вокруг пунктов */
-aside,
-[class*="sidebar"] {
-  background-color: #1B1B2B !important;
-  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-aside div,
-aside nav,
-aside ul,
-aside li {
-  background-color: transparent !important;
-}
-
-/* 5. Кнопка "Launch App" с твоим градиентом */
+/* 4. Кнопка "Launch App" (градиент 0% - 8C7FFE, 50% - 8967FB, 100% - 864FF8) */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   color: #FFFFFF !important;
   border: none !important;
   border-radius: 8px !important;
-  height: 38px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 0 16px !important;
-  font-weight: 500 !important;
   box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
-  transition: all 0.2s ease-in-out !important;
+  transition: opacity 0.2s ease !important;
 }
 
 header a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
-  transform: translateY(-1px) !important;
 }
