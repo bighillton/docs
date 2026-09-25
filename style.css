@@ -127,7 +127,7 @@ a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
 
-/* 7. ТОЧНОЕ УВЕЛИЧЕНИЕ ПЛАШЕК САЙДБАРА (ВЫСОТА И ВЕРТИКАЛЬНЫЕ ПАДДИНГИ) */
+/* 7. ТОЧНОЕ УВЕЛИЧЕНИЕ ПЛАШЕК САЙДБАРА */
 aside ul li a,
 aside nav a,
 div[class*="sidebar"] a,
@@ -143,8 +143,16 @@ a[class*="group flex"] {
   line-height: 20px !important;
 }
 
-/* Убираем жесткий сброс высоты у внутренних span-элементов Mintlify */
 aside ul li a span,
 aside nav a span {
   line-height: 20px !important;
+}
+
+/* 8. ВЫРАВНИВАНИЕ САЙДБАРА СТРОГО ПОД ЛОГОТИПОМ (СБРОС ВНУТРЕННИХ ОТСТУПОВ) */
+aside,
+div[class*="sidebar"],
+div[class*="Sidebar"],
+aside > div {
+  padding-left: 18px !important;
+  margin-left: 0 !important;
 }
