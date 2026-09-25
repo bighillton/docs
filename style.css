@@ -109,14 +109,14 @@ main h1 {
 }
 
 /* ==========================================
-   6. КНОПКА LAUNCH APP (ВЫСОТА 34px, ДЛИНА 146px, REGULAR)
+   6. КНОПКА LAUNCH APP (ВЫСОТА 34px, ДЛИНА 142px, REGULAR)
    ========================================== */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   background-image: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
-  width: 146px !important;
-  min-width: 146px !important;
+  width: 142px !important;
+  min-width: 142px !important;
   height: 34px !important;
   border-radius: 12px !important;
   padding: 5px 12px !important;
