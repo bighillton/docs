@@ -32,16 +32,19 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 4. УБИРАЕМ ТЕМНЫЙ ПРЯМОУГОЛЬНИК ВОКРУГ ЗАГОЛОВКОВ (Stocks, Quickstart) */
-main h1,
-main h1 + div,
-main [class*="hero"],
-main div[class*="bg-slate"],
-main div[class*="bg-zinc"],
-main div[class*="bg-neutral"] {
+/* 4. НАМЕРТВО УБИРАЕМ ПРЯМОУГОЛЬНИК ВОКРУГ ЗАГОЛОВКА СТРАНИЦЫ (Introduction, Stocks) */
+#header,
+main header,
+main > div > div:first-child,
+div[id="header"],
+div[class*="PageHeader"],
+[class*="header-bg"],
+[class*="banner"] {
+  background: transparent !important;
   background-color: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
+  border: none !important;
 }
 
 /* 5. КНОПКА "Launch App" */
