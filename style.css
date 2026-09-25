@@ -19,20 +19,23 @@ body, button, input, select, textarea {
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 2. Нативная подмена цвета хедера через переменные Mintlify */
-:root, body.dark {
-  --header-bg: #2C2A40 !important;
-}
-
-/* 3. Окрашивание хедера без жестких высот */
+/* 2. Только верхний фиксированный хедер (#2C2A40) */
 header,
-#topbar-cta,
-nav[class*="header"] {
+#topbar-cta {
   background-color: #2C2A40 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 4. Кнопка "Launch App" с градиентом */
+/* 3. Полоса с табами навигации (Documentation) — сливаем с фоном #1D1B2B */
+div[class*="tabs"],
+div[class*="tabs-bar"],
+nav[class*="tabs"],
+[class*="border-b"][class*="bg-"] {
+  background-color: #1D1B2B !important;
+  border-bottom-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 4. Кнопка "Launch App" (градиент) */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
