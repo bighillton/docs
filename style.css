@@ -135,46 +135,50 @@ a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
 
-/* 7. ЕДИНАЯ СЕТКА САЙДБАРА (ВЫРАВНИВАНИЕ ПО ЛОГОТИПУ) */
+/* 7. ВЫРАВНИВАНИЕ ПЛАШЕК И ЗАГОЛОВКОВ ПО ОДНОЙ ЛИНИИ (КАК У UNISWAP) */
 
-/* Заголовки групп (Getting Started, Trade, Trading Bots) — строго влево */
-aside [class*="sidebar"] h5,
+/* Заголовки разделов (Getting Started, Trade) */
 aside h5,
-aside div[class*="font-semibold"],
-aside p[class*="font-semibold"] {
-  padding-left: 12px !important;
+aside p[class*="font-semibold"],
+aside div[class*="font-semibold"] {
+  padding-left: 0 !important;
   margin-left: 0 !important;
   margin-top: 24px !important;
   margin-bottom: 8px !important;
 }
 
-/* Все обычные ссылки/пункты — ровный левый край для плашки выделения */
+/* Все ссылки и плашки сайдбара */
 aside nav a,
 aside ul li a,
 div[class*="sidebar"] a {
+  /* Сбрасываем встроенные сдвиги Mintlify */
   margin-left: 0 !important;
+  margin-right: 0 !important;
+  
+  /* Отступ ТЕКСТА внутри плашки от ее левого края */
   padding-left: 12px !important;
   padding-right: 12px !important;
   padding-top: 8px !important;
   padding-bottom: 8px !important;
-  border-radius: 8px !important;
+  
   min-height: 38px !important;
+  border-radius: 8px !important;
   display: flex !important;
   align-items: center !important;
   box-sizing: border-box !important;
 }
 
-/* Внутренние подпункты (как на 4 скриншоте) — увод вправо */
+/* Вложенные подпункты (как Concepts -> How Uniswap Works) */
 aside ul ul a,
 aside nav nav a,
 aside li li a {
-  padding-left: 28px !important;
+  padding-left: 24px !important;
 }
 
-/* 8. ПОЗИЦИОНИРОВАНИЕ САЙДБАРА ПОД ЛОГОТИПОМ */
+/* 8. ОБЩИЙ ОТСТУП ВСЕГО САЙДБАРА ОТ КРАЯ ЭКРАНА (ПОД ЛОГОТИП) */
 aside,
 div[class*="sidebar"],
 nav[aria-label="Sidebar"] {
-  padding-left: 32px !important; /* Ровно такой же отступ, как у логотипа в хедере */
+  padding-left: 32px !important; /* Левый отступ ровно по логотипу */
   margin-left: 0 !important;
 }
