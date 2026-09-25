@@ -61,6 +61,15 @@ header::after {
   pointer-events: none !important;
 }
 
+/* 4.2. ОТСТУПЫ В ХЕДЕРЕ (РАСШИРЕНИЕ ВЛЕВО И ВПРАВО) */
+header > div,
+header nav,
+div[class*="Header"] > div {
+  max-width: 100% !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
 /* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА И СБРОС ЛИНИЙ */
 #header,
 div[id="header"],
@@ -83,23 +92,16 @@ main h1 {
 /* 6. КНОПКА LAUNCH APP (ВЫСОТА 38px, ДЛИНА 168px) */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
-  /* Градиент */
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   background-image: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
-  
-  /* Размеры: 168px на 38px */
   width: 168px !important;
   min-width: 168px !important;
   height: 38px !important;
   border-radius: 12px !important;
   padding: 7px 16px !important;
-
-  /* Центрирование */
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-
-  /* Типографика */
   color: #FFFFFF !important;
   font-size: 16px !important;
   line-height: 24px !important;
@@ -109,14 +111,12 @@ a[href*="app.dyxy.io"] {
   box-sizing: border-box !important;
 }
 
-/* Удаление встроенного фона у дочерних элементов кнопки */
 header a[href*="app.dyxy.io"] > *,
 a[href*="app.dyxy.io"] > * {
   background: transparent !important;
   background-color: transparent !important;
 }
 
-/* Скрытие стрелочки ">" */
 header a[href*="app.dyxy.io"] svg,
 a[href*="app.dyxy.io"] svg {
   display: none !important;
@@ -127,18 +127,24 @@ a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
 
-/* 7. УВЕЛИЧЕНИЕ ВЫСОТЫ И КЛИКАБЕЛЬНОСТИ БЛОКОВ САЙДБАРА (44px) */
-aside a,
+/* 7. ТОЧНОЕ УВЕЛИЧЕНИЕ ПЛАШЕК САЙДБАРА (ВЫСОТА И ВЕРТИКАЛЬНЫЕ ПАДДИНГИ) */
 aside ul li a,
 aside nav a,
-div[class*="sidebar"] a {
-  height: 44px !important;
-  min-height: 44px !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-top: 4px !important;
-  margin-bottom: 4px !important;
-  display: flex !important;
-  align-items: center !important;
-  border-radius: 12px !important;
+div[class*="sidebar"] a,
+a[class*="group flex"] {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
+  border-radius: 10px !important;
+  font-size: 15px !important;
+  line-height: 20px !important;
+}
+
+/* Убираем жесткий сброс высоты у внутренних span-элементов Mintlify */
+aside ul li a span,
+aside nav a span {
+  line-height: 20px !important;
 }
