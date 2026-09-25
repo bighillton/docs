@@ -7,7 +7,32 @@
     "light": "#8967FB",
     "dark": "#864FF8"
   },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "favicon": "/favicon.svg",
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Launch App",
+      "href": "https://app.dyxy.io"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/dyxyhq",
+      "github": "https://github.com/dyxy-io",
+      "telegram": "https://t.me/DYXY_Announcements"
+    }
+  },
+  "icons": {
+    "library": "lucide"
+  },
   "navigation": {
     "tabs": [
       {
@@ -64,52 +89,5 @@
         ]
       }
     ]
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Launch App",
-      "href": "https://app.dyxy.io"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/dyxyhq",
-      "github": "https://github.com/dyxy-io",
-      "telegram": "https://t.me/DYXY_Announcements"
-    }
-  },
-  "icons": {
-    "library": "lucide"
-  },
-  "appearance": {
-    "default": "dark",
-    "strict": true
-  },
-  "fonts": {
-    "heading": {
-      "family": "sdcdwcwcwdcw",
-      "weight": 400
-    },
-    "body": {
-      "family": "Inter",
-      "weight": 200
-    }
   }
 }
