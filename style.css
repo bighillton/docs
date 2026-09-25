@@ -136,65 +136,41 @@ a[href*="app.dyxy.io"]:hover {
 }
 
 /* ==========================================
-   7 & 8. ЖЕСТКОЕ ВЫРАВНИВАНИЕ САЙДБАРА И ПЛАШЕК
+   7 & 8. ТОЧНЫЙ ВЗЛОМ СЕТКИ MINTLIFY ПО РЕАЛЬНЫМ КЛАССАМ
    ========================================== */
 
-/* 1. Сбрасываем внутренние отступы у ВСЕХ оберток сайдбара, 
-   чтобы левый край стал единой точкой отсчета */
-aside,
-aside *,
-div[class*="sidebar"],
-div[class*="Sidebar"] {
-  box-sizing: border-box !important;
+/* 1. Сбрасываем внутренний отступ pl-4 у заголовков групп (Getting Started) */
+#navigation-items .sidebar-group-header {
+  padding-left: 0px !important;
+  margin-left: 0px !important;
 }
 
-/* 2. Прижимаем сам сайдбар под логотип (32px от края экрана) */
-aside,
-div[class*="sidebar"] {
-  padding-left: 32px !important;
-  margin-left: 0 !important;
+/* 2. Убираем сдвиг у контейнеров списков */
+#navigation-items .sidebar-group {
+  padding-left: 0px !important;
+  margin-left: 0px !important;
 }
 
-/* 3. ЗАГОЛОВКИ ГРУПП (Getting Started, Trade, Trading Bots)
-   Убираем у них любые левые отступы — они встают СТРОГО на 0 от края сайдбара */
-aside div[class*="font-semibold"],
-aside button[class*="font-semibold"],
-aside p[class*="font-semibold"],
-aside [class*="title"] {
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-
-/* 4. СПИСКИ И ОБЕРТКИ ПУНКТОВ — убираем сдвиги Tailwind (ml-*, pl-*) */
-aside ul,
-aside li,
-aside nav,
-aside div[class*="space-y"] {
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-
-/* 5. КЛИКАБЕЛЬНЫЕ ПЛАШКИ (Overview, Quickstart и т.д.)
-   Начинаются РОВНО от левого края, а текст внутри смещаем на 12px */
-aside a,
-div[class*="sidebar"] a {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 12px !important;  /* Внутренний отступ ТЕКСТА от края плашки */
+/* 3. Выравниваем плашки меню: левый край плашки встает РОВНО под первой буквой заголовка */
+#navigation-items .sidebar-group a {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding-left: 12px !important; /* Отступ текста ВНУТРИ плашки */
   padding-right: 12px !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  min-height: 38px !important;
   border-radius: 8px !important;
+  min-height: 38px !important;
   display: flex !important;
   align-items: center !important;
-  width: 100% !important;
 }
 
-/* 6. ВЛОЖЕННЫЕ ПОДПУНКТЫ (Concepts -> How Uniswap Works)
-   Только у них делаем явный сдвиг вправо */
-aside ul ul a,
-aside li li a,
-aside nav nav a {
+/* 4. Если внутри есть подпункты (как в Uniswap) — смещаем их правее */
+#navigation-items .sidebar-group ul a,
+#navigation-items .sidebar-group .sidebar-group a {
   padding-left: 24px !important;
+}
+
+/* 5. Позиционируем весь блок навигации строго под логотипом */
+#navigation-items {
+  padding-left: 0px !important;
+  margin-left: 0px !important;
 }
