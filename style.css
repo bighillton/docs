@@ -65,29 +65,35 @@ main h1 {
   line-height: 1.2 !important;
 }
 
-/* 6. КНОПКА "Launch App" — ЖЕСТКАЯ ПОДМЕНА ГРАДИЕНТА С НЕЙТРАЛИЗАЦИЕЙ TAILWIND */
+/* 6. ЖЕСТКИЙ ВЗЛОМ КНОПКИ "Launch App" С ПОЛНЫМ СБРОСОМ ТАЙЛВИНДА */
 html body header a[href*="app.dyxy.io"],
-html body a[href*="app.dyxy.io"] {
-  /* Нейтрализация фонового цвета Tailwind */
-  --tw-bg-opacity: 1 !important;
-  background-color: unset !important;
+html body a[href*="app.dyxy.io"],
+html body header button,
+html body header a[class*="button"] {
+  /* Полная нейтрализация внутренних переменных Tailwind */
+  --tw-bg-opacity: 0 !important;
+  --tw-gradient-from: transparent !important;
+  --tw-gradient-to: transparent !important;
+  --tw-gradient-stops: transparent !important;
   
-  /* Принудительная установка линейного градиента */
-  background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
+  /* Сброс стандартных фонов */
+  background-color: transparent !important;
+  
+  /* Принудительная замена фоновой картинки на градиент */
   background-image: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   
-  /* Размеры и скругления из Figma */
+  /* Размеры и форма из Figma */
   min-width: 174px !important;
   height: 46px !important;
   border-radius: 12px !important;
   padding: 10px 24px !important;
 
-  /* Выравнивание по центру */
+  /* Позиционирование содержимого */
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
 
-  /* Свойства текста и тени */
+  /* Оформление текста и тени */
   color: #FFFFFF !important;
   border: none !important;
   box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
@@ -97,6 +103,14 @@ html body a[href*="app.dyxy.io"] {
   font-size: 16px !important;
   line-height: 24px !important;
   font-weight: 500 !important;
+}
+
+/* Отключение сплошных overlay-слоев, если Mintlify генерирует псевдоэлементы */
+html body header a[href*="app.dyxy.io"]::before,
+html body header a[href*="app.dyxy.io"]::after,
+html body a[href*="app.dyxy.io"]::before,
+html body a[href*="app.dyxy.io"]::after {
+  display: none !important;
 }
 
 /* Скрытие иконки стрелочки внутри кнопки */
