@@ -1,52 +1,65 @@
-/* 1. Подключаем шрифт из папки fonts */
+/* 1. Подключение шрифтов (с учетом регистра символов) */
 @font-face {
-  font-family: 'CustomFont';
-  src: url('/fonts/mycustomfont-regular.woff2') format('woff2'); /* Укажи точное имя своего .woff2 файла из папки fonts */
-  font-weight: normal;
+  font-family: 'MyCustomFont';
+  src: url('/fonts/MyCustomFont-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-/* 2. Применяем шрифт ко всему сайту */
-body, h1, h2, h3, h4, h5, h6, p, span, a, button, input {
-  font-family: 'CustomFont', -apple-system, BlinkMacSystemFont, sans-serif !important;
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/MyCustomFont-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* 3. Нормальный темный фон (убираем эту грязно-синюю муть) */
-html.dark, 
-html.dark body {
-  background-color: #09090b !important;
+/* 2. Применение шрифта ко всем элементам */
+* {
+  font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 4. Приводим в порядок размеры текста и заголовков */
-h1 {
-  font-size: 2.25rem !important; /* 36px */
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  letter-spacing: -0.02em !important;
+/* 3. Основной цвет фона (#1B1B2B) */
+html,
+body,
+html.dark,
+html.dark body,
+#content-area,
+main {
+  background-color: #1B1B2B !important;
 }
 
-h2 {
-  font-size: 1.5rem !important; /* 24px */
-  font-weight: 600 !important;
-  color: #f4f4f5 !important;
-  margin-top: 2rem !important;
+/* 4. Хедер (#2C2A40) */
+header,
+html.dark header,
+nav[class*="navbar"] {
+  background-color: #2C2A40 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-p, li {
-  font-size: 1rem !important; /* 16px */
-  line-height: 1.65 !important;
-  color: #a1a1aa !important; /* Читаемый серый цвет текста */
-}
-
-/* 5. Сайдбар и Шапка */
+/* 5. Боковая панель (Sidebar) */
+aside,
 html.dark aside {
-  background-color: #09090b !important;
-  border-right: 1px solid #18181b !important;
+  background-color: #1B1B2B !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 6. Карточки (Quickstart / Next) */
-html.dark [class*="Card"],
-html.dark a[href] {
-  border-color: #27272a !important;
+/* 6. Кастомная градиентная кнопка "Launch App" */
+header a[href*="app.dyxy.io"],
+a[href*="app.dyxy.io"] {
+  background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%) !important;
+  color: #FFFFFF !important;
+  border-radius: 10px !important; /* Углы кнопки */
+  padding: 8px 18px !important;
+  font-weight: 500 !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.3) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+header a[href*="app.dyxy.io"]:hover,
+a[href*="app.dyxy.io"]:hover {
+  opacity: 0.9 !important;
+  transform: translateY(-1px) !important;
 }
