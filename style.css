@@ -135,50 +135,66 @@ a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
 
-/* 7. ВЫРАВНИВАНИЕ ПЛАШЕК И ЗАГОЛОВКОВ ПО ОДНОЙ ЛИНИИ (КАК У UNISWAP) */
+/* ==========================================
+   7 & 8. ЖЕСТКОЕ ВЫРАВНИВАНИЕ САЙДБАРА И ПЛАШЕК
+   ========================================== */
 
-/* Заголовки разделов (Getting Started, Trade) */
-aside h5,
-aside p[class*="font-semibold"],
-aside div[class*="font-semibold"] {
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-  margin-top: 24px !important;
-  margin-bottom: 8px !important;
+/* 1. Сбрасываем внутренние отступы у ВСЕХ оберток сайдбара, 
+   чтобы левый край стал единой точкой отсчета */
+aside,
+aside *,
+div[class*="sidebar"],
+div[class*="Sidebar"] {
+  box-sizing: border-box !important;
 }
 
-/* Все ссылки и плашки сайдбара */
-aside nav a,
-aside ul li a,
+/* 2. Прижимаем сам сайдбар под логотип (32px от края экрана) */
+aside,
+div[class*="sidebar"] {
+  padding-left: 32px !important;
+  margin-left: 0 !important;
+}
+
+/* 3. ЗАГОЛОВКИ ГРУПП (Getting Started, Trade, Trading Bots)
+   Убираем у них любые левые отступы — они встают СТРОГО на 0 от края сайдбара */
+aside div[class*="font-semibold"],
+aside button[class*="font-semibold"],
+aside p[class*="font-semibold"],
+aside [class*="title"] {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* 4. СПИСКИ И ОБЕРТКИ ПУНКТОВ — убираем сдвиги Tailwind (ml-*, pl-*) */
+aside ul,
+aside li,
+aside nav,
+aside div[class*="space-y"] {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* 5. КЛИКАБЕЛЬНЫЕ ПЛАШКИ (Overview, Quickstart и т.д.)
+   Начинаются РОВНО от левого края, а текст внутри смещаем на 12px */
+aside a,
 div[class*="sidebar"] a {
-  /* Сбрасываем встроенные сдвиги Mintlify */
   margin-left: 0 !important;
   margin-right: 0 !important;
-  
-  /* Отступ ТЕКСТА внутри плашки от ее левого края */
-  padding-left: 12px !important;
+  padding-left: 12px !important;  /* Внутренний отступ ТЕКСТА от края плашки */
   padding-right: 12px !important;
   padding-top: 8px !important;
   padding-bottom: 8px !important;
-  
   min-height: 38px !important;
   border-radius: 8px !important;
   display: flex !important;
   align-items: center !important;
-  box-sizing: border-box !important;
+  width: 100% !important;
 }
 
-/* Вложенные подпункты (как Concepts -> How Uniswap Works) */
+/* 6. ВЛОЖЕННЫЕ ПОДПУНКТЫ (Concepts -> How Uniswap Works)
+   Только у них делаем явный сдвиг вправо */
 aside ul ul a,
-aside nav nav a,
-aside li li a {
+aside li li a,
+aside nav nav a {
   padding-left: 24px !important;
-}
-
-/* 8. ОБЩИЙ ОТСТУП ВСЕГО САЙДБАРА ОТ КРАЯ ЭКРАНА (ПОД ЛОГОТИП) */
-aside,
-div[class*="sidebar"],
-nav[aria-label="Sidebar"] {
-  padding-left: 32px !important; /* Левый отступ ровно по логотипу */
-  margin-left: 0 !important;
 }
