@@ -37,38 +37,18 @@ div[class*="tabs-bar"] {
   display: none !important;
 }
 
-/* 4. ФОН И СТИЛЬ ХЕДЕРА (#2C2A40) */
-header,
-div[class*="Header"],
-nav[class*="Header"] {
+/* 4. ФОН ХЕДЕРА И ПЕРЕКРАСКА ЛИНИИ В ЦВЕТ ХЕДЕРА (#2C2A40) */
+header {
   background-color: #2C2A40 !important;
   background: #2C2A40 !important;
-  border: none !important;
-  border-bottom: none !important;
+  border-color: #2C2A40 !important;
+  border-bottom-color: #2C2A40 !important;
+  --tw-border-color: #2C2A40 !important;
+  --tw-ring-color: #2C2A40 !important;
   box-shadow: none !important;
 }
 
-/* 4.1. ПЕРЕКРАСКА СТЫКА В ЦВЕТ ОСНОВНОЙ ОБЛАСТИ (#1D1B2B) */
-header::after {
-  content: '' !important;
-  position: absolute !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  height: 1px !important;
-  background-color: #1D1B2B !important;
-  z-index: 10 !important;
-  pointer-events: none !important;
-}
-
-/* 4.2. ВЕРТИКАЛЬНОЕ ЦЕНТРИРОВАНИЕ ЭЛЕМЕНТОВ В ХЕДЕРЕ */
-header > div,
-header nav {
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА И СБРОС ЛИНИЙ */
+/* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА */
 #header,
 div[id="header"],
 div[class*="PageHeader"],
