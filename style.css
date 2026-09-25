@@ -43,7 +43,7 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 5. УДАЛЕНИЕ СЕРОГО ПРЯМОУГОЛЬНИКА С ЗАГОЛОВКОВ */
+/* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА (Swap) НА НАВИГАЦИЮ (< Quickstart) */
 #header,
 div[id="header"],
 div[class*="PageHeader"],
@@ -53,18 +53,33 @@ div[class*="header-bg"] {
   background-image: none !important;
   box-shadow: none !important;
   border: none !important;
+  padding-bottom: 0px !important;
+  margin-bottom: 12px !important;
 }
 
-/* 6. КНОПКА "Launch App" */
+main h1 {
+  margin-bottom: 16px !important;
+  line-height: 1.2 !important;
+}
+
+/* 6. КНОПКА "Launch App" — ЕДИНЫЙ СТИЛЬ ДЛЯ ДЕСКТОПА И МОБИЛЬНОЙ ВЕРСИИ */
+/* Десктопная кнопка в хедере и мобильная кнопка в меню */
 header a[href*="app.dyxy.io"],
-a[href*="app.dyxy.io"] {
+a[href*="app.dyxy.io"],
+div[role="dialog"] a[href*="app.dyxy.io"],
+[class*="mobile"] a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   color: #FFFFFF !important;
   border: none !important;
-  border-radius: 8px !important;
+  border-radius: 10px !important; /* Укажи любой border-radius из Figma */
   box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 500 !important;
 }
 
-header a[href*="app.dyxy.io"]:hover {
+header a[href*="app.dyxy.io"]:hover,
+a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
