@@ -37,22 +37,25 @@ div[class*="tabs-bar"] {
   display: none !important;
 }
 
-/* 4. ФОН ХЕДЕРА И ИСЧЕЗНОВЕНИЕ ЛИНИИ (ПЕРЕКРАСКА В ЦВЕТ ХЕДЕРА #2C2A40) */
-header {
+/* 4. ФОН И УДАЛЕНИЕ НИЖНЕЙ ЛИНИИ (BORDER) У ХЕДЕРА */
+header,
+div[class*="Header"],
+nav[class*="Header"] {
   background-color: #2C2A40 !important;
   background: #2C2A40 !important;
-  border-color: #2C2A40 !important; /* Линия сливается с хедером */
-  border-bottom-color: #2C2A40 !important;
-  --tw-border-opacity: 1 !important;
+  border-bottom: none !important;
+  border: none !important;
   box-shadow: none !important;
 }
 
-/* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА СТРАНИЦЫ */
+/* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА И УБИРАЕМ ЛИНИИ В СМЕЖНЫХ БЛОКАХ */
 #header,
 div[id="header"],
-div[class*="PageHeader"] {
+div[class*="PageHeader"],
+div[class*="header-bg"] {
   background: transparent !important;
   background-color: transparent !important;
+  background-image: none !important;
   box-shadow: none !important;
   border: none !important;
   padding-bottom: 0px !important;
@@ -64,21 +67,21 @@ main h1 {
   line-height: 1.2 !important;
 }
 
-/* 6. КНОПКА LAUNCH APP (ВЫСОТА 38px, ДЛИНА 168px, С ГРАДИЕНТОМ) */
+/* 6. КНОПКА LAUNCH APP (ВЫСОТА 38px, ДЛИНА 168px) */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   /* Градиент */
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   background-image: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   
-  /* Размеры: 168px x 38px */
+  /* Размеры: 168px на 38px */
   width: 168px !important;
   min-width: 168px !important;
   height: 38px !important;
   border-radius: 12px !important;
   padding: 7px 16px !important;
 
-  /* Центрирование текста */
+  /* Центрирование */
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -93,14 +96,14 @@ a[href*="app.dyxy.io"] {
   box-sizing: border-box !important;
 }
 
-/* Удаление встроенных фонов у внутренних элементов кнопки */
-header a[href*="app.dyxy.io"] >,
+/* Удаление встроенного фона у дочерних элементов кнопки */
+header a[href*="app.dyxy.io"] > *,
 a[href*="app.dyxy.io"] > * {
   background: transparent !important;
   background-color: transparent !important;
 }
 
-/* Скрытие стрелочки ">" в кнопке */
+/* Скрытие стрелочки ">" */
 header a[href*="app.dyxy.io"] svg,
 a[href*="app.dyxy.io"] svg {
   display: none !important;
