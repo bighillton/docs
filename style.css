@@ -19,32 +19,31 @@ body, button, input, select, textarea {
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 2. Сбрасываем плашки и оверлеи внутри контента (чтобы убрать прямоугольник над Quickstart) */
-main div[class*="bg-"],
-main header,
-article header,
-[class*="hero"] {
-  background-color: transparent !important;
-  background-image: none !important;
+/* 2. НАМЕРТВО СНОСИМ ПОЛОСУ ТАБОВ (Documentation) */
+nav[aria-label="Tabs"],
+div:has(> nav[aria-label="Tabs"]),
+[class*="tabs-bar"],
+[class*="TabsBar"] {
+  display: none !important;
 }
 
-/* 3. Верхняя шапка — строго #2C2A40 */
-header:first-of-type,
-header[class*="sticky"],
-header[class*="top"] {
+/* 3. ФОН ХЕДЕРА (#2C2A40) */
+header {
   background-color: #2C2A40 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 4. Полоса с табом "Documentation" — сливаем с основным фоном #1D1B2B */
-header + div,
-nav[aria-label*="Tabs"],
-header ~ div[class*="border-b"] {
-  background-color: #1D1B2B !important;
-  border-bottom-color: rgba(255, 255, 255, 0.05) !important;
+/* 4. УБИРАЕМ ПРЯМОУГОЛЬНЫЙ ОВЕРЛЕЙ У ЗАГОЛОВКА СТРАНИЦЫ (Stocks / Quickstart) */
+main #header,
+main div[class*="bg-"],
+main header,
+div[class*="hero"] {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
 }
 
-/* 5. Кнопка "Launch App" (градиент) */
+/* 5. КНОПКА "Launch App" */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
