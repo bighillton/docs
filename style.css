@@ -1,4 +1,4 @@
-/* 1. Подключение шрифтов (с учетом регистра символов) */
+/* 1. Подключение шрифтов */
 @font-face {
   font-family: 'MyCustomFont';
   src: url('/fonts/MyCustomFont-Regular.woff2') format('woff2');
@@ -15,75 +15,55 @@
   font-display: swap;
 }
 
-/* 2. Применение шрифта ко всем элементам */
 * {
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 3. Основной цвет фона (#1B1B2B) */
+/* 2. Основной фон страницы и всех оберток (#1B1B2B) */
 html,
 body,
-html.dark,
-html.dark body,
+:root,
+body.dark,
+[class*="bg-background"],
+[class*="bg-zinc-"],
+[class*="bg-slate-"],
+[class*="bg-neutral-"],
 #content-area,
 main {
   background-color: #1B1B2B !important;
+  background-image: none !important;
 }
 
-/* 4. Хедер (#2C2A40) */
+/* 3. Верхняя шапка / Header (#2C2A40) */
 header,
-html.dark header,
-nav[class*="navbar"] {
+nav,
+[class*="header"],
+[class*="navbar"],
+[class*="top-bar"] {
   background-color: #2C2A40 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-<<<<<<< editor
-/* 5. Боковая панель (Sidebar) */
+/* 4. Левый сайдбар / Sidebar (#1B1B2B) */
 aside,
-html.dark aside {
+[class*="sidebar"],
+[class*="navigation"] {
   background-color: #1B1B2B !important;
-  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
-=======
-/* 5. Боковая панель (Sidebar) */
-aside,
-html.dark aside {
-  background-color: #1B1B2B !important;
-  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-right-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 6. Кастомная градиентная кнопка "Launch App" */
+/* 5. Кнопка "Launch App" с указанным градиентом */
 header a[href*="app.dyxy.io"],
-a[href*="app.dyxy.io"] {
-  background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%) !important;
+a[href*="app.dyxy.io"],
+button[class*="primary"],
+a[class*="bg-primary"] {
+  background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   color: #FFFFFF !important;
-  border-radius: 10px !important; /* Углы кнопки */
-  padding: 8px 18px !important;
-  font-weight: 500 !important;
   border: none !important;
-  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.3) !important;
-  transition: all 0.2s ease-in-out !important;
->>>>>>> git
-}
-
-<<<<<<< editor
-/* 6. Кастомная градиентная кнопка "Launch App" */
-header a[href*="app.dyxy.io"],
-a[href*="app.dyxy.io"] {
-  background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%) !important;
-  color: #FFFFFF !important;
-  border-radius: 10px !important; /* Углы кнопки */
-  padding: 8px 18px !important;
+  border-radius: 8px !important;
   font-weight: 500 !important;
-  border: none !important;
-  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(137, 103, 251, 0.35) !important;
   transition: all 0.2s ease-in-out !important;
-=======
-header a[href*="app.dyxy.io"]:hover,
-a[href*="app.dyxy.io"]:hover {
-  opacity: 0.9 !important;
-  transform: translateY(-1px) !important;
->>>>>>> git
 }
 
 header a[href*="app.dyxy.io"]:hover,
