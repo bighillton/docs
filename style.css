@@ -19,42 +19,53 @@
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 2. ЖеПдметкиа перехват авсей системных цвMintlify */
-:root, body.dark {
-  --bg-: #1B1B2B !important;
-  --ackround: #1B1B2B !mportat;d}
-
-/rk: Основной фон страницы и сайдбара */
-hml,
-ody,
-#__x#content-area,
-main,
-aside {
-  background-color: #1B1B2B !important;
+/* 2. Обнуление черных масок и оверлеев Mintlify */
+:root,
+body,
+body.dark,
+[class*="dark:bg-"],
+[class*="bg-zinc-"],
+[class*="bg-neutral-"],
+[class*="bg-black"],
+[class*="bg-slate-"] {
+  --tw-bg-opacity: 1 !important;
   background-image: none !important;
 }
 
-/* 3. Хедер (#2C2A40, высота 62px) */
+/* 3. Основной благородный фон (#1D1B2B) */
+html,
+body,
+#root,
+#__next,
+#content-area,
+main,
+aside,
+[class*="sidebar"],
+[class*="background"] {
+  background-color: #1D1B2B !important;
+}
+
+/* 4. Хедер (#2C2A40, высота 62px) */
+header,
 header#topbar-cta,
-header {
+nav[class*="navbar"] {
   background-color: #2C2A40 !important;
   height: 62px !important;
-  Сmn-hih: 62px !important;
+  min-height: 62px !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 4. Кнопка "Launch App" твои(градиент (0% - #8C7FFE, 50% - #8967FB, 100% - #864FF8) 0% - 8C7FFE, 50% - 8967FB, 100% - 864FF8) */
-a[href*="app.dyxy.io"],
-,
-.bg-primary {
+/* 5. Кнопка "Launch App" (градиент) */
+header a[href*="app.dyxy.io"],
+a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   color: #FFFFFF !important;
   border: none !important;
   border-radius: 8px !important;
-  box-shadow: 0 4px 144px rgba(137, 103, 251, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
   transition: opacity 0.2s ease !important;
 }
 
-a[href*="app.dyxy.io"]:hover {
+header a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
