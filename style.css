@@ -15,49 +15,31 @@
   font-display: swap;
 }
 
-/* 2. ГЛОБАЛЬНЫЙ ПРИНУДИТЕЛЬНЫЙ ШРИФТ ДЛЯ ВСЕХ ТЕГОВ И СЕКЦИЙ */
+/* Принудительная подмена системных CSS-переменных Mintlify */
 :root {
   --font-sans: 'MyCustomFont', sans-serif !important;
   --font-heading: 'MyCustomFont', sans-serif !important;
 }
 
-*,
-*::before,
-*::after,
-html,
-body,
-main,
-header,
-footer,
-h1, h2, h3, h4, h5, h6,
-p, span, div, a, button, input,
-[class*="font-"],
-[class*="text-"] {
-  font-family: 'MyCustomFont', sans-serif !important;
-}
-
-/* 3. СКРЫВАЕМ ПОЛОСУ ТАБОВ (Documentation) */
+/* 2. СКРЫВАЕМ ПОЛОСУ ТАБОВ (Documentation) */
 nav[aria-label="Tabs"],
 nav[aria-label="tabs"],
 div[class*="tabs-bar"] {
   display: none !important;
 }
 
-/* 4. ФОН И СТИЛЬ ХЕДЕРА (#2C2A40) */
+/* 3. ФОН И СТИЛЬ ХЕДЕРА (#2C2A40) */
 header {
   background-color: #2C2A40 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 5. УДАЛЕНИЕ СЕРОГО ПРЯМОУГОЛЬНИКА С ЗАГОЛОВКОВ */
-main h1,
-main h1 + p,
-main div:has(> h1),
-main header,
+/* 4. БЕЗОПАСНОЕ УДАЛЕНИЕ ФОНОВОГО ПРЯМОУГОЛЬНИКА С ЗАГОЛОВКА */
+/* Убираем только фоновые цвета и плашки у блока заголовка, не трогая сам шрифт */
 #header,
-[class*="Header"],
-[class*="Banner"],
-[class*="hero"] {
+div[id="header"],
+div[class*="PageHeader"],
+div[class*="header-bg"] {
   background: transparent !important;
   background-color: transparent !important;
   background-image: none !important;
@@ -65,7 +47,7 @@ main header,
   border: none !important;
 }
 
-/* 6. КНОПКА "Launch App" */
+/* 5. КНОПКА "Launch App" */
 header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
