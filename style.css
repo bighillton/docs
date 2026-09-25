@@ -19,51 +19,66 @@
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 2. Жесткий перехват фона всей страницы (#1B1B2B) */
+/* 2. Чистый единый фон страницы без паразитных плашек */
 html,
 body,
-:root,
+#root,
+#__next,
 body.dark,
-[class*="bg-"],
-[class*="dark:bg-"],
 #content-area,
 main {
   background-color: #1B1B2B !important;
   background-image: none !important;
 }
 
-/* 3. Верхняя шапка (#2C2A40) */
+/* 3. Высота хедера точно 62px */
 header,
-nav,
-[class*="header"],
-[class*="navbar"],
-[class*="top-bar"] {
-  background-color: #2C2A40 !important;
-  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+nav#navbar,
+[class*="Header"],
+[class*="navbar"] {
+  height: 62px !important;
+  min-height: 62px !important;
+  max-height: 62px !important;
+  background-color: #1B1B2B !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
-/* 4. Сайдбар (#1B1B2B) */
+/* 4. Сайдбар без темных квадратов вокруг пунктов */
 aside,
 [class*="sidebar"] {
   background-color: #1B1B2B !important;
-  border-right-color: rgba(255, 255, 255, 0.08) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 5. Кнопка "Launch App" с твоим градиентом (0% - #8C7FFE, 50% - #8967FB, 100% - #864FF8) */
-a[href*="app.dyxy.io"],
-button[class*="primary"],
-a[class*="bg-primary"],
-.bg-primary {
+aside div,
+aside nav,
+aside ul,
+aside li {
+  background-color: transparent !important;
+}
+
+/* 5. Кнопка "Launch App" с твоим градиентом */
+header a[href*="app.dyxy.io"],
+a[href*="app.dyxy.io"] {
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   color: #FFFFFF !important;
   border: none !important;
   border-radius: 8px !important;
+  height: 38px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 16px !important;
   font-weight: 500 !important;
   box-shadow: 0 4px 14px rgba(137, 103, 251, 0.35) !important;
   transition: all 0.2s ease-in-out !important;
 }
 
-a[href*="app.dyxy.io"]:hover {
+header a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
   transform: translateY(-1px) !important;
 }
