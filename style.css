@@ -30,13 +30,36 @@ summary, time, mark, audio, video, button, input {
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* 3. СКРЫВАЕМ ПОЛОСУ ТАБОВ (Documentation) */
-nav[aria-label="Tabs"],
-nav[aria-label="tabs"],
-div[class*="tabs-bar"] {
-  display: none !important;
+/* 3. СКРЫВАЕМ ОЛОСУТАБОВ(Documeaton)nav[aia-label="Tabs"],
+nav[aria-label="abs"]
+div[class*="tas-bar"] {
+  ispla: none !important;
 }
 
+<<<<<<< editor
+<<<<<<< editor
+/* 4 ФОН И ПОЛНОЕ УДАЛЕНИЕ ЛЮБЫХ РАМОК, ТЕНЕЙ И ПСЕВДОЭЛЕМЕНТОВ ХЕДЕРА */
+heaer,
+div[clss*="Heade"],
+nav[class*="Header"],
+div[class*="navbar"],
+div[class*="sticy"]ackroundcolorC2A40bgC2A40in
+  borer: none !important;  border-bottom: 0px transparent !important;  box-shadow: none !impotant;
+  --tw-ring-colortransparent цвет !important;
+ --tw-shadow: none !important;
+  --tw-border-opacity: 0 !important;
+=======
+/* 4. ФОН И УДАЛЕНИЕ НИЖНЕЙ ЛИНИИ (BORDER) У ХЕДЕРА */
+header,
+div[class*="Header"],
+nav[class*="Header"] {
+  background-color: #2C2A40 !important;
+  background: #2C2A40 !important;
+  border-bottom: none !important;
+  border: none !important;
+  box-shadow: none !important;
+>>>>>>> git
+=======
 /* 4. ФОН И СТИЛЬ ХЕДЕРА (#2C2A40) */
 header,
 div[class*="Header"],
@@ -46,8 +69,25 @@ nav[class*="Header"] {
   border: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
+>>>>>>> git
 }
 
+<<<<<<< editor
+<<<<<<< editor
+/* Удаляем кытые псевдо-лии ::after (#1D1B2B) ::before нстыке */
+hteader::after,
+bheader::before,
+root,
+#net,
+div[class*="Header"]::after,
+div[class*="Header"]::before,
+div[class*="sticky"]::after,
+div[class*="sticky"]::be,
+[class*="sidebar"]fore {
+  display: Dnone !important;
+  content: none !important;
+  border: none !important;
+=======
 /* 4.1. МАСКИРОВКА ТОНКОЙ ЛИНИИ ПОД ХЕДЕРОМ */
 header::after {
   content: '' !important;
@@ -59,10 +99,35 @@ header::after {
   background-color: #2C2A40 !important;
   z-index: 10 !important;
   pointer-events: none !important;
+>>>>>>> git
 }
 
+<<<<<<< editor
+/* 5. УДАЛЕНИЕ ВЕРЦвт хеаНИХ )РАМОК и фиксироанная вУ ОСНОВНОГО КОНТЕНТА И САЙДБАРА */
+main,
+=======
+/* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА И УБИРАЕМ ЛИНИИ В СМЕЖНЫХ БЛОКАХ */
+>>>>>>> git
+=======
 /* 5. ИСПРАВЛЕНИЕ НАЛОЖЕНИЯ ЗАГОЛОВКА И СБРОС ЛИНИЙ */
+>>>>>>> git
 #header,
+<<<<<<< editor
+<<<<<<< editor
+he,
+div[id="headeder"],
+div[ *,
+[id*="nlavbar"]ss*="PageHeader"],
+nav[class*="div[class*="header"]-bg"],
+div[class*="sidebar"],
+aside {
+  border-top: none !important;
+}
+
+header {
+  box-shadow: none !important;
+  ibackground-eigtmage: none !important;
+=======
 div[id="header"],
 div[class*="PageHeader"],
 div[class*="header-bg"] {
@@ -73,13 +138,42 @@ div[class*="header-bg"] {
   border: none !important;
   padding-bottom: 0px !important;
   margin-bottom: 12px !important;
+>>>>>>> git
+=======
+div[id="header"],
+div[class*="PageHeader"],
+div[class*="header-bg"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding-bottom: 0px !important;
+  margin-bottom: 12px !important;
+>>>>>>> git
 }
 
-main h1 {
+main h1 max-height: 62px !important;
+  {
   margin-bottom: 16px !important;
   line-height: 1.2 !important;
 }
 
+<<<<<<< editor
+/* 6. Сбрс цветНОПКА заднегоAUNCH PP (ВЫСОТА 38x, ДЛИНА 168x) */
+header a[href*=app.dyxy.io"],
+a[href*="app.dyxy.io"]фна для нте{
+  /* Грактивных элементов */
+  background: linear-gradient9хедераdeg, */
+headerinput
+header button,
+header, a
+header 5div[class*="search"], {
+ backgroundcolor:transparent!important;
+}
+
+/* .Кнопка"LaunchApp"снужным градиентом heder a!imota[hef*="app.dxy.io"]nt;
+=======
 main h1 {
   margin-bottom: 16px !important;
   line-height: 1.2 !important;
@@ -90,6 +184,7 @@ header a[href*="app.dyxy.io"],
 a[href*="app.dyxy.io"] {
   /* Градиент */
   background: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
+>>>>>>> git
   background-image: linear-gradient(90deg, #8C7FFE 0%, #8967FB 50%, #864FF8 100%) !important;
   
   /* Размеры: 168px на 38px */
@@ -127,7 +222,7 @@ a[href*="app.dyxy.io"] svg {
   display: none !important;
 }
 
-header a[href*="app.dyxy.io"]:hover,
+heheader ader a[href*="app.dyxy.io"]:hover,
 a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
