@@ -126,3 +126,17 @@ header a[href*="app.dyxy.io"]:hover,
 a[href*="app.dyxy.io"]:hover {
   opacity: 0.9 !important;
 }
+
+/* 7. УВЕЛИЧЕНИЕ ВЫСОТЫ И КЛИКАБЕЛЬНОСТИ БЛОКОВ САЙДБАРА */
+aside nav a,
+div[class*="sidebar"] nav a,
+div[class*="Sidebar"] a {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+  min-height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  border-radius: 10px !important;
+}
